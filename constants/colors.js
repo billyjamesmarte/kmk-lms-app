@@ -1,0 +1,28 @@
+const Colors = {
+    // primary400: '#0d6efd',
+    primary500: "#FF5400",
+    // primary600: '#0d6efd',
+    // secondary400: '#6c757',
+    secondary500: '#6c757',
+    // secondary600: '#6c757',
+    // success400: '#198754',
+    success500: '#198754',
+    // success600: '#198754',
+    // danger400: '#dc3545',
+    danger500: '#dc3545',
+    // danger600: '#dc3545',
+    // warning400: '#ffc107',
+    warning500: '#ffc107',
+    // warning600: '#ffc107',
+    // info400: '#0dcaf0',
+    info500: '#0dcaf0',
+    // info600: '#0dcaf0',
+    // light400: '#f8f9fa',
+    light500: '#f8f9fa',
+    // light600: '#f8f9fa',
+    dark400: '#344767',
+    dark500: '#212529',
+    // dark600: '#212529',
+}
+
+export default Colors;
