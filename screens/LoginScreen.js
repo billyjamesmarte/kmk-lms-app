@@ -19,7 +19,7 @@ function LoginScreen() {
   const [secureText, setSecureText] = useState(true);
 
   // call this function when the clicks the sign in button
-  function loginAccount() {
+  function loginAccountHandler() {
     navigation.replace("Menu");
   }
 
@@ -53,7 +53,7 @@ function LoginScreen() {
           <Icon name={secureText ? "eye-slash" : "eye"} style={styles.icon} />
         </TouchableOpacity>
       </View>
-      <TouchableOpacity style={styles.button} onPress={() => loginAccount()}>
+      <TouchableOpacity style={styles.button} onPress={() => loginAccountHandler()}>
         <Text style={styles.buttonText}>SIGN IN</Text>
       </TouchableOpacity>
       <Text style={styles.footerText}>

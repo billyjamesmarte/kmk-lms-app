@@ -31,7 +31,6 @@ function DashboardScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Dashboard</Text>
       <Text style={styles.subtitle}>Welcome to the Dashboard</Text>
     </View>
   );

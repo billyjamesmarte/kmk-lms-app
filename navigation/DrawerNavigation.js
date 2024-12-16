@@ -1,6 +1,10 @@
-import { View, Image, StyleSheet, Text } from "react-native";
+import { View, Image, StyleSheet, Text, Alert } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList } from "@react-navigation/drawer";
+import {
+  createDrawerNavigator,
+  DrawerContentScrollView,
+  DrawerItemList,
+} from "@react-navigation/drawer";
 import Icon from "react-native-vector-icons/FontAwesome";
 
 import DashboardScreen from "../screens/DashboardScreen";
@@ -21,7 +25,7 @@ function CustomDrawerContent(props) {
       {/* Logo at the top */}
       <View style={styles.logoContainer}>
         <Image
-          source={require("../assets/images/kmk-logo.png")}
+          source={require("../assets/images/kmk-360-logo.png")}
           style={styles.logo}
         />
       </View>
@@ -34,6 +38,12 @@ function CustomDrawerContent(props) {
 
 function notificationHandler() {
   console.log("Notification Handler");
+}
+
+function generateQRCodeHandler() {
+  Alert.alert("Ops!", "Unable to generate QR Code", [
+    { text: "Back", style: "cancel" },
+  ]);
 }
 
 function DrawerNavigator() {
@@ -54,13 +64,22 @@ function DrawerNavigator() {
         drawerInactiveTintColor: "#333",
         // drawerActiveBackgroundColor: "#ccc",
         headerRight: () => (
-          <IconButton
-            onPress={notificationHandler}
-            icon="notifications"
-            color="white"
-            size={24}
-            style={{ marginRight: 10 }}
-          />
+          <View style={styles.iconHeaderRightContainer}>
+            <IconButton
+              onPress={generateQRCodeHandler}
+              icon="qr-code"
+              color="white"
+              size={24}
+              style={{ marginRight: 10 }}
+            />
+            <IconButton
+              onPress={notificationHandler}
+              icon="notifications"
+              color="white"
+              size={24}
+              style={{ marginRight: 10 }}
+            />
+          </View>
         ),
       }}
     >
@@ -138,7 +157,7 @@ const styles = StyleSheet.create({
     marginVertical: 20,
   },
   logo: {
-    width: 190,
+    width: 280,
     height: 48,
     borderRadius: 4,
   },
@@ -147,5 +166,9 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginTop: 10,
     color: "#1f65ff",
+  },
+  iconHeaderRightContainer: {
+    flexDirection: "row",
+    alignItems: "center",
   },
 });

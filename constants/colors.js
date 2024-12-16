@@ -20,8 +20,9 @@ const Colors = {
     // light400: '#f8f9fa',
     light500: '#f8f9fa',
     // light600: '#f8f9fa',
-    dark400: '#344767',
-    dark500: '#212529',
+    dark300: '#344767',
+    dark400: '#222222',
+    dark500: '#101010',
     // dark600: '#212529',
 }
 
