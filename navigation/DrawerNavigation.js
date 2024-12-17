@@ -138,7 +138,7 @@ function DrawerNavigator() {
         name="ChatKmk"
         component={ChatKmkScreen}
         options={{
-          title: "Chat KMK",
+          title: "ChatKMK",
           drawerIcon: ({ color, size }) => (
             <Icon name="comment" color={color} size={size} />
           ),
